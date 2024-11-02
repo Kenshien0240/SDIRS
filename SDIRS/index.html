@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Infraction System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Student Disciplinary Infraction Recording System</h1>
+    <form id="infraction-form" action="submit_infraction.php" method="POST">
+        <label for="student-name">Student Name:</label>
+        <input type="text" id="student-name" name="student_name" required>
+
+        <label for="student-id">Student Grade level:</label>
+        <input type="text" id="student-id" name="student_id" required>
+
+        <label for="infraction-details">Infraction Details:</label>
+        <textarea id="infraction-details" name="infraction_details" required></textarea>
+
+        <button type="submit">Submit Infraction</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
