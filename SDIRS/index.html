@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Student Disciplinary Infraction Recording System</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
     <div class="main">
@@ -37,7 +37,7 @@
                 <h2>Login Here</h2>
                 <input type="email" name="email" placeholder="Enter Email Here">
                 <input type="password" name="" placeholder="Enter Password Here">
-                <button class="btnn"><a href="#">Login</a></button>
+                <button class="btnn" onclick="redirectToPage()">Login</button>
 
                 <p class="link">Don't have an account<br>
                 <a href="#">Sign up</a> here</a></p>
@@ -57,5 +57,9 @@
          </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script> function redirectToPage() {
+       window.location.href = 'register.html'
+       }
+       </script>
 </body>
 </html>
