@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Log in form</title>
 
-    <Link rel="stylesheet" href="css/form.css"></Link>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
-    <div class="alert-box">
-        <P class="alert">msg</P>
-    </div>
+    <div class="form-container">
 
-    <div class="form">
-        <h1 class="heading">Login</h1>
-        <input type="email" placeholder="email" autocomplete="off" class="email" required>
-        <input type="password" placeholder="password" autocomplete="off" class="password" required>
-        <button class="submit-btn">Log in</button>
-        <a href="#" class="Link">don't have an account? Register one</a>
-    </div>
+        <form action="" method="post">
+            <h3>log in</h3>
+            <input type="text" name="name" required placeholder="enter your name">
+            <input type="text" name="email" required placeholder="enter your email">
+            <input type="text" name="password" required placeholder="enter your password">        
+            <input type="submit" name="submit" value="login now" class="form-btn">
+            <p>don't have an account? <a href="register.html">register now</a></p>
+        </form>
 
-    <script src="js/form.js"></script>
+    </div>
     
 </body>
 </html>

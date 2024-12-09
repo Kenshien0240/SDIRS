@@ -6,9 +6,9 @@
     
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%) ;
     background-position: center;
-    background-size: cover;
+    background-size:inherit;
     height: 109vh;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .logo{
-    color: #ff0000;
+    color: #800;
     font-size: 35px;
     font-family: Arial;
     padding-left: 20px;
@@ -61,7 +61,7 @@ ul li a{
 }
 
 ul li a:hover{
-    color: #ff0000;
+    color: #800;
 }
 
 .search{
@@ -75,7 +75,7 @@ ul li a:hover{
     width: 200px;
     height: 40px;
     background: transparent;
-    border: 1px solid #ff0000;
+    border: 1px solid #800;
     margin-top: 13px;
     color: #fff;
     border-right: none;
@@ -89,8 +89,8 @@ ul li a:hover{
 .btn{
     width: 100px;
     height: 40px;
-    background: #ff0000;
-    border: 2px solid #ff0000;
+    background: #800;
+    border: 2px solid #800;
     margin-top: 13px;
     color: #fff;
     font-size: 15px;
@@ -126,14 +126,14 @@ ul li a:hover{
     font-family: 'Times New Roman';
     font-size: 50px;
     padding-left: 20px;
-    margin-top: 9%;
+    margin-top: 8%;
     letter-spacing: 2px;
 }
 
 .content .cn{
     width: 160px;
     height: 40px;
-    background: #ff0000;
+    background: #800;
     border: none;
     margin-bottom: 10px;
     margin-left: 20px;
@@ -146,7 +146,7 @@ ul li a:hover{
 
 .content .cn a{
     text-decoration: none;
-    color: #000;
+    color: #fff;
     transition: .3s ease;
 
 }
@@ -156,14 +156,104 @@ ul li a:hover{
 }
 
 .content span{
-    color: #ff0000;
+    color: #800;
+    font-size: 60px;
+}
+
+.content .if{
+    width: 160px;
+    height: 40px;
+    background: #800;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+
+}
+
+.content .if a{
+    text-decoration: none;
+    color: #fff;
+    transition: .3s ease;
+
+}
+
+.if:hover{
+    background-color: #fff;
+}
+
+.content span{
+    color: #800;
+    font-size: 60px;
+}
+
+.content .if{
+    width: 160px;
+    height: 40px;
+    background: #800;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+
+}
+
+.content .if a{
+    text-decoration: none;
+    color: #fff;
+    transition: .3s ease;
+
+}
+
+.ms:hover{
+    background-color: #fff;
+}
+
+.content span{
+    color: #800;
+    font-size: 60px;
+}
+
+.content .ms{
+    width: 160px;
+    height: 40px;
+    background: #800;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+
+}
+
+.content .ms a{
+    text-decoration: none;
+    color: #fff;
+    transition: .3s ease;
+
+}
+
+.ms:hover{
+    background-color: #fff;
+}
+
+.content span{
+    color: #800;
     font-size: 60px;
 }
 
 .form{
     width: 250px;
     height: 380px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%) ;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
     position: absolute;
     top: -20px;
     left: 870px;
@@ -175,7 +265,7 @@ ul li a:hover{
     width: 220px;
     font-family: sans-serif;
     text-align: center;
-    color: #ff0000;
+    color: #800;
     font-size: 22px;
     background-color: #fff;
     border-radius: 10px;
@@ -187,7 +277,7 @@ ul li a:hover{
     width: 240px;
     height: 35px;
     background: transparent;
-    border-bottom: 1px solid #ff0000;
+    border-bottom: 1px solid #800;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -211,7 +301,7 @@ ul li a:hover{
 
     width: 240px;
     height: 40px;
-    background: #ff0000;
+    background: #800;
     border: none;
     margin-top: 30px;
     font-size: 30px;
@@ -223,7 +313,7 @@ ul li a:hover{
 
 .btnn:hover{
     background: #fff;
-    color: #ff0000;
+    color: #800;
 }
 
 .btnn a{
@@ -240,7 +330,7 @@ ul li a:hover{
 
 .fortm .link a{
     text-decoration: none;
-    color: #ff0000;
+    color: #800;
 }
 
 .liw{
@@ -263,5 +353,5 @@ ul li a:hover{
 }
 
 .icons ion-icon:hover{
-    color: #ff0000;
+    color: #800;
 }

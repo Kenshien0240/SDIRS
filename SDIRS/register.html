@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Register form</title>
 
-    <Link rel="stylesheet" href="css/form.css"></Link>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 
-    <div class="alert-box">
-        <P class="alert">msg</P>
-    </div>
+    <div class="form-container">
 
-    <div class="form">
-        <h1 class="heading">Register</h1>
-        <input type="text" placeholder="text" autocomplete="off" class="text" required>
-        <input type="email" placeholder="email" autocomplete="off" class="email" required>
-        <input type="password" placeholder="password" autocomplete="off" class="password" required>
-        <button class="submit-btn">register</button>
-        <a href="#" class="Link">already have an account? Log in here</a>
-    </div>
+        <form action="" method="post">
+            <h3>register now</h3>
+            <input type="text" name="name" required placeholder="enter your name">
+            <input type="text" name="email" required placeholder="enter your email">
+            <input type="text" name="password" required placeholder="enter your password">
+            <input type="text" name="cpassword" required placeholder="confirm your password">
+            <select name="user_type">
+                <option value="student">Student</option>
+                <option value="techer">Teacher</option>
+                <option value="admin">Administrator</option>
+            </select>
+            <input type="submit" name="submit" value="register now" class="form-btn">
+            <p>already have an account? <a href="login.html">log in now</a></p>
+        </form>
 
-    <script src="js/form.js"></script>
+    </div>
     
 </body>
 </html>
