@@ -1,14 +1,14 @@
 <?php
 // Include your database connection
-include('include/config.php');
+include('../include/config.php');
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Check if the user exists
-    $sql = "SELECT id, name, password FROM users WHERE email = ?";
+    // Check if the admin exists in the database
+    $sql = "SELECT id, name, password FROM admin_accounts WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param('s', $email);
     $stmt->execute();
@@ -20,24 +20,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Verify the password
         if (password_verify($password, $hashed_password)) {
-            // Store user info in the session
-            $_SESSION['user_id'] = $id;
-            $_SESSION['user_name'] = $name;
+            // Store admin info in the session
+            $_SESSION['admin_id'] = $id;
+            $_SESSION['admin_name'] = $name;
+            $_SESSION['is_admin'] = true;
 
-            // Redirect to the subfolder's index.php
-            header('Location: student_logged/index.php');
+            // Redirect to the admin dashboard
+            header('Location: admin_dashboard.php');
             exit();
         } else {
             // Invalid password
-            header('Location: login.php?error=invalid_password');
+            header('Location: admin_login.php?error=invalid_password');
             exit();
         }
     } else {
         // Invalid credentials or empty fields
         if (empty($email) || empty($password)) {
-            header('Location: login.php?error=empty_fields');
+            header('Location: admin_login.php?error=empty_fields');
         } else {
-            header('Location: login.php?error=invalid_credentials');
+            header('Location: admin_login.php?error=invalid_credentials');
         }
         exit();
     }

@@ -1,3 +1,16 @@
+<?php
+if (isset($_GET['signup']) && $_GET['signup'] === 'success') {
+    echo '<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            showSuccessPopup();
+        });
+    </script>';
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +19,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="css/login.css">
-    <title>SDIRS | Sign up Page</title>
+    <title>SDIRS | Login Page</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,13 +42,14 @@
                     <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <span>or use your email for registeration</span>
+                <span>or use your email for registration</span>
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Password" required>
                 <button type="submit">Sign Up</button>
             </form>
         </div>
+    
         <div class="form-container sign-in">
             <form action="signin.php" method="POST">
                 <h1>Sign In</h1>
@@ -40,6 +62,24 @@
                 <span>or use your email password</span>
                 <input type="email" name="email" placeholder="Email" required>
                 <input type="password" name="password" placeholder="Password" required>
+                
+                <!-- Error message -->
+                <?php if (isset($_GET['error'])): ?>
+                    <div class="error-message">
+                        <?php 
+                        if ($_GET['error'] === 'invalid_password') {
+                            echo "Invalid password. Please try again.";
+                        } elseif ($_GET['error'] === 'user_not_found') {
+                            echo "Invalid email";
+                        } elseif ($_GET['error'] === 'invalid_credentials') {
+                            echo "Invalid email and password. Please check your credentials.";
+                        } elseif ($_GET['error'] === 'empty_fields') {
+                            echo "Please fill in all fields.";
+                        }
+                        ?>
+                    </div>
+                <?php endif; ?>
+
                 <a href="#">Forget Your Password?</a>
                 <button type="submit">Sign In</button>
             </form>
@@ -48,12 +88,12 @@
             <div class="toggle">
                 <div class="toggle-panel toggle-left">
                     <h1>Welcome Back!</h1>
-                    <p>Enter your personal details to use all of site features</p>
+                    <p>Enter your personal details to use all of the site's features</p>
                     <button class="hidden" id="login">Sign In</button>
                 </div>
                 <div class="toggle-panel toggle-right">
                     <h1>Hello, Stallions!</h1>
-                    <p>Register with your personal details to use all of site features</p>
+                    <p>Register with your personal details to use all of the site's features</p>
                     <button class="hidden" id="register">Sign Up</button>
                 </div>
             </div>

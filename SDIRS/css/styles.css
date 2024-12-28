@@ -3856,6 +3856,9 @@ textarea.form-control-lg {
   max-height: var(--bs-scroll-height, 75vh);
   overflow-y: auto;
 }
+
+
+/* Signup and User btn in header design */
 .signup-btn{
   border: 1px solid white;
   color: white;
@@ -3875,6 +3878,11 @@ textarea.form-control-lg {
   transition: .3s;
   font-size: 1.2rem;
 }
+
+#user-dropdown-item{
+  color: #bc102e;
+}
+
 
 @media (min-width: 576px) {
   .navbar-expand-sm {
