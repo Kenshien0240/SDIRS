@@ -15,7 +15,6 @@
                 <li class="nav-item"><a class="nav-link" href="#portfolio">Gallery</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
             <ul class="navbar-nav pl-3">
             <li class="nav-item dropdown">
