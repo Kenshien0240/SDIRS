@@ -1,0 +1,152 @@
+/* Root Variables */
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #000000;
+    --bg-color-dark: #1e1e1e;
+    --text-color-dark: #f5f5f5;
+    --card-bg-light: #f0f0f0;
+    --card-bg-dark: #2d2d2d;
+    --minor: #ffc107;
+    --major: #ff5722;
+    --expulsion: #f44336;
+    --low-severity: #d4a017;
+    --medium-severity: #ff5722;
+    --high-severity: #d32f2f;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.header h1 {
+    color: #8b0000;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Profile Settings */
+.profile-settings {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-settings button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8b0000;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-settings button:hover {
+    background-color: #a00000;
+}
+
+/* My Infractions */
+.my-infractions {
+    margin-top: 120px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-color-light);
+    transition: color 0.3s;
+}
+
+.dark-mode .my-infractions {
+    color: var(--text-color-dark);
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-bg-light);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.dark-mode .card {
+    background-color: var(--card-bg-dark);
+}
+
+.severity {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.low-severity {
+    background-color: var(--low-severity);
+}
+
+.medium-severity {
+    background-color: var(--medium-severity);
+}
+
+.high-severity {
+    background-color: var(--high-severity);
+}
+
+/* Rules */
+.rules {
+    background-color: var(--card-bg-light);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .rules {
+    background-color: var(--card-bg-dark);
+}

@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Disciplinary Infraction Recording System</title>
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="stylesAdmin.css">
 </head>
 <body>
-    <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">SDIRS</h2>    
-            </div>
+    <div class="container">
+        <header class="header">
+            <button class="profile-btn" onclick="toggleProfileSettings()">&#128100;</button>
+            <button class="night-mode-btn" onclick="toggleNightMode()">&#9728;</button>
+        </header>
+        <main class="main-content">
+            <h1>SDIRS</h1>
+            <h2>Student Disciplinary Infraction Recording System</h2>
+            <section class="form-section">
+                <h3>Record Student Infraction</h3>
+                <form>
+                    <label for="student-name">Student Name</label>
+                    <input type="text" id="student-name" placeholder="Enter student name">
 
-            <div class="menu">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">STUDENTS</a></li>
-                    <li><a href="#">TEACHERS</a></li>
-                    <li><a href="#">VIOLATIONS</a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </div>
-            
-            <div class="search">
-                <input class="srch" type="search" name="" placeholder="Type to text">
-                <a href="#"> <button class="btn">Search</button></a>
-            </div>
-           
-         </div>
-         <div class="content">
-            
-            <button class="cn"><a href="#">Add Student</a></button>
-            
-            <div class="management">
+                    <label for="grade-level">Grade Level</label>
+                    <select id="grade-level">
+                        <option value="">Select grade level</option>
+                        <option value="1">Grade 1</option>
+                        <option value="2">Grade 2</option>
+                        <option value="3">Grade 3</option>
+                    </select>
 
-            <button class="ms"><a href="#">Manage Student</a></button>
+                    <label for="date">Date</label>
+                    <input type="date" id="date">
 
-            <div>
+                    <label for="infraction-level">Infraction Level</label>
+                    <select id="infraction-level">
+                        <option value="">Select infraction level</option>
+                        <option value="minor">Minor</option>
+                        <option value="major">Major</option>
+                    </select>
 
-                <button class="if"><a href="#">Student Violation</a></button>
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Enter infraction description"></textarea>
 
-            </div>
-
-            </div>
-            </div>
-                <div>
-          </div>
-         </div>
+                    <button type="submit" class="submit-btn">Record Infraction</button>
+                </form>
+            </section>
+        </main>
+        <div id="profile-settings" class="profile-settings hidden">
+            <h4>Profile Settings</h4>
+            <button onclick="closeProfileSettings()">Close</button>
+        </div>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
